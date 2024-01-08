@@ -1,0 +1,4 @@
+npm init -y
+npm i webpack webpack-cli -D
+npm i lodash -> 자바스크립트 유틸리티 라이브러리
+index.html src/index.js 파일 추가 및 코드 추가
