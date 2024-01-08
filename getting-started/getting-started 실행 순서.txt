@@ -12,3 +12,4 @@ development, production, none 이 3가지가 존재 함
 none 를 주고 했을땐 그나마 볼만한 코드가 나옴
 development 은 아주 조금 알아볼 수 있게 나옴
 production 은 그냥 못알아봄 공백 줄바꿈 등 전부 제외된 파일
+mode 가 난독화의 조건인것 같음
