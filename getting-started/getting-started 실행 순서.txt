@@ -5,3 +5,10 @@ index.html src/index.js 파일 추가 및 코드 추가
 이후 일부 코드 수정 및 명령어 추가, 명령어 실행
 추가된 명령어 : package.json -> scripts -> "build": "webpack"
 실행 명령어 : npm run build
+
+webpack 실행 하면 mode 값이 없다고 경고 창이 뜸 이것의 이유 
+development, production, none 이 3가지가 존재 함
+모드를 주지 않고 빌드 해서 나온 파일을 알아볼 수 없게 바뀜
+none 를 주고 했을땐 그나마 볼만한 코드가 나옴
+development 은 아주 조금 알아볼 수 있게 나옴
+production 은 그냥 못알아봄 공백 줄바꿈 등 전부 제외된 파일
