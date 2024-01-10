@@ -21,3 +21,45 @@ npm install ~~ 이건 npm i ~~ 이걸로 축약 가능
 빌드를 하고 배포를 할때 설치가 되지 않음 -> 이부분은 주의 해서 진행 해야 함.
 
 두 군데에 구분 해서 설치 해야 함.
+
+
+웹팩의 4가지 주요 속성
+
+entry
+output
+loader
+plugin
+
+
+entry
+웹팩에서 웹 자원을 반환하기 위해 필요한 최초 진입점이자 자바스크립트 파일 경로.
+entry: './src/index.js'
+웹팩을 실행했을 때 src 폴더 밑의 index.js을 대상으로 웹팩이 빌드를 수행하는 코드
+
+output
+웹팩을 돌리고 난 결과물의 파일 경로를 의미
+output: {
+    filename: 'bundle.js'
+  }
+객체 형태로 옵션을 추가
+일반적으로 path 속성을 함께 정의 한다.
+var path = require('path');
+output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './dist')
+  }
+
+filename 은 웹팩으로 빌드한 파일의 이름을 의미
+path 는 해당 파일의 경로를 의미
+여기서 path.resolve() 는 이ㅏㄴ자로 넘어온 경로들을 조합하여 유효한 파일 경로를 만들어주는 Node.js 의 API 임
+
+
+loader
+웹팩이 웹 애플리케이션을 해석할 때 자바스크립트 파일이 아닌 웹 자원(HTML, CSS, Image, 폰트 등)들을
+변환할 수 있도록 도와주는 속성
+엔트리나 아웃풋과 다르게 module 이라는 이름을 사용
+
+https://joshua1988.github.io/webpack-guide/concepts/loader.html#css-loader-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0
+
+
+
